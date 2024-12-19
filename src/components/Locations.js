@@ -284,8 +284,21 @@ const Locations = ({ timelineIndex }) => {
                                 /> : <p></p>
                             } */}
                         </div>
-                        {/* Navigation Buttons */}
-                        <div className="font-urbanist absolute top-[40%] left-[97%] transform -translate-y-1/2 flex gap-4">
+                        <div className="absolute -right-6 top-1/4 transform -translate-y-1/2 flex flex-col gap-2">
+                        <button
+                                onClick={handleNext}
+                                className="w-10 h-10 rounded-full bg-pink-500 flex items-center justify-center text-white shadow-md"
+                            >
+                                <FaArrowRight />
+                                </button>
+                                <button
+                                onClick={handlePrev}
+                                className="w-10 h-10 rounded-full bg-pink-500 flex items-center justify-center text-white shadow-md"
+                            >
+                                <FaArrowLeft />
+                            </button>
+                        </div>
+                        {/* <div className="font-urbanist absolute top-[40%] left-[97%] transform -translate-y-1/2 flex gap-4">
                             <button
                                 onClick={handleNext}
                                 className="w-10 h-10 rounded-full bg-pink-500 flex items-center justify-center text-white shadow-md"
@@ -300,7 +313,7 @@ const Locations = ({ timelineIndex }) => {
                             >
                                 <FaArrowLeft />
                             </button>
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* Text Section */}

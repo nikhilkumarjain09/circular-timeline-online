@@ -47,7 +47,9 @@ const Timeline = ({onUpdate}) => {
 
     ]
     const [selectedNode, setSelectedNode] = useState(0); // Initial node 0 (Position 1)
-    const [rotation, setRotation] = useState(0); // Track rotation of the circle
+    const [rotation, setRotation] = useState(0);
+    const [rotationtext, setRotationText] = useState(0); // Track rotation of the circle
+
     const textStyles = (index) => {
         const totalNodes = 8; // Total of 8 nodes (for angle calculation)
         const visibleNodes = 6; // Only show 6 nodes
@@ -60,9 +62,8 @@ const Timeline = ({onUpdate}) => {
 
         const visibleAngle = angleBetweenNodes * index; // Position each node based on angle for 8 nodes
         if (anglesfortext[index].angle + rotation < 0) {
-            console.log("Check", anglesfortext[index].angle + rotation)
             return {
-                transform: `rotate(${visibleAngle}deg) translate(clamp(50px, 10vw, 150px)) rotate(-${anglesfortext[index].angle + rotation}deg)`, // Align nodes along the border
+                transform: `rotate(${visibleAngle}deg) translate(clamp(50px, 10vw, 150px)) rotate(45deg)`, // Align nodes along the border
                 transition: 'transform 0.3s', // Smooth transition
             };
         } else {
@@ -80,6 +81,7 @@ const Timeline = ({onUpdate}) => {
 
         // Rotate the circle by the calculated difference in angles
         setRotation(rotation - angleDifference);
+        setRotationText(rotationtext+45)
         onUpdate(nodeIndex);
     };
 
@@ -100,6 +102,10 @@ const Timeline = ({onUpdate}) => {
             transition: 'transform 0.3s', // Smooth transition
         };
     };
+    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 440); // Track screen size
+    const [radius, setRadius] = useState(380); // Initial radius value
+
+
 
     return (
         <div className="absolute w-full top-[20%] bg-black">
@@ -126,7 +132,7 @@ const Timeline = ({onUpdate}) => {
                             key={index}
                             className={`absolute w-6 h-6 flex justify-center items-center cursor-pointer ${selectedNode === index ? 'text-pink-500' : ''
                                 }`}
-                            style={textStyles(index)} // Apply the styles to each node
+                            style={textStyles(index)}
                         // onClick={() => handleClick(index)} // Handle node click
                         >
                             {index <= 5 ? timelineevents[index].name : ""}
