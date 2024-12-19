@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/circular-timeline-online/static/css/main.2feac34e.css",
+    "main.js": "/circular-timeline-online/static/js/main.fd34ec5b.js",
+    "static/js/488.340fd1e2.chunk.js": "/circular-timeline-online/static/js/488.340fd1e2.chunk.js",
+    "static/media/map.jpg": "/circular-timeline-online/static/media/map.e7859f7bae2f2a315609.jpg",
+    "index.html": "/circular-timeline-online/index.html",
+    "main.2feac34e.css.map": "/circular-timeline-online/static/css/main.2feac34e.css.map",
+    "main.fd34ec5b.js.map": "/circular-timeline-online/static/js/main.fd34ec5b.js.map",
+    "488.340fd1e2.chunk.js.map": "/circular-timeline-online/static/js/488.340fd1e2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2feac34e.css",
+    "static/js/main.fd34ec5b.js"
+  ]
+}
