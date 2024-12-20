@@ -54,7 +54,7 @@ function App() {
         {/* Map Modal */}
         {/* <MapModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} /> */}
       </div>
-      <section className="font-urbanist h-screen md:h-screen">
+      <section className="font-urbanist md:h-screen">
         <Locations timelineIndex={timelineIndex} />
       </section>
     </div>
