@@ -108,7 +108,7 @@ const Timeline = ({onUpdate}) => {
 
 
     return (
-        <div className="absolute w-full top-[20%] bg-black">
+        <div className="absolute w-full top-[20%]">
             <div className="absolute ml-[-20%] md:ml-[-15%] left-0 w-1/3">
                 <div
                     className="w-48 h-52 md:w-96 md:h-96 border-4 border-white rounded-full absolute flex justify-center items-center"
@@ -144,11 +144,11 @@ const Timeline = ({onUpdate}) => {
             {/* Centered Text Content */}
             <div className="absolute left-1/3 transform">
                 {timelineevents[selectedNode] && (
-                    <div className="text-white max-w-lg mx-auto">
+                    <div className="text-white max-w-lg h-auto mx-auto">
                         <h3 className="text-3xl font-bold mb-4">{timelineevents[selectedNode].name}</h3>
                         <h2 className="text-1xl font-bold mb-4">{timelineevents[selectedNode].eventName}</h2>
                         <h1 className="text-sm col-span-1">Year:{timelineevents[selectedNode].eventYear}</h1>
-                        <p className="col-span-3">{timelineevents[selectedNode].description}</p>
+                        <p className="h-auto">{timelineevents[selectedNode].description}</p>
                         {/* {timelineevents[selectedNode].description.map((item, index) => (
                             <div key={index} className="grid grid-cols-4">
                                 <h1 className="text-sm col-span-1">Year:{item.year}</h1>
